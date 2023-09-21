@@ -1,0 +1,24 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.promotion-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.promotion-item {
+    width: 30%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+.promotion-item h2 {
+    margin: 0;
+}
+.promotion-item p {
+    margin: 5px 0;
+}
+.promotion-item img {
+    max-width: 100%;
+}

@@ -1,0 +1,19 @@
+/* Estilos CSS para la galería */
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-button {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}

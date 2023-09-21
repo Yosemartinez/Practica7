@@ -1,0 +1,35 @@
+.pizza-info {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative; /* Permitir el posicionamiento relativo para el elemento interno */
+}
+
+.pizza-info h2 {
+    color: #333;
+}
+
+.pizza-info p {
+    color: #666;
+}
+
+/* Estilos CSS para la imagen en movimiento */
+.moving-image {
+    position: absolute;
+    top: 50%;
+    left: -100px; /* Comienza fuera del bloque */
+    animation: moveImage 5s linear infinite; /* Animación de movimiento */
+}
+
+@keyframes moveImage {
+    0% {
+        left: -100px; /* Comienza fuera del bloque */
+    }
+    100% {
+        left: calc(100% - 100px); /* Termina fuera del bloque en el lado opuesto */
+    }
+}

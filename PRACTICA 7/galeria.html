@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial=1.0">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/galeria.css"
+        <title>Practica 7 </title>
+
+    </head>
+    <body>
+        <div id="encabezado">
+            <div id="menu">
+                <ul>
+                    <li><a href="index.html" title="Pagina principal">INICIO</a></li>
+                    <li><a href="Nosotros.html" title="Descripcio del negocio">NOSOTROS</a></li>
+                    <li><a href="catalogo.html" title="Catálago">NUESTROS PRODUCTOS</a></li>
+                    <li><a href="galeria.html" title="Fotos">GALERIA</a></li>
+                    <li><a href="promociones.html" title="promociones">PROMOCIONES</a></li>
+                    <li><a href="contacto.html" title="Nuestros datos">CONTACTO</a></li> 
+                </ul>
+            </div>
+        </div>
+        <div class="areaPrincipal">
+            <div id="datos1">
+                <br><h2>
+                 <center><p> El tio Pepe visitanos y disfruta del mejor sabor</p>
+                    <p>Contamos con los mejores sabores de Pizzas</p>     </center>       
+                </h2>
+                <center><p>Las mejores hamburguesas de la ciudad estan aqui</p><br></center>
+                <div class="gallery">
+                    <img src="img/pizza al pastor.png" alt="Imagen 1">
+                    <img src="img/Pizza Hawaiana.png" alt="Imagen 2">
+                    <img src="img/Pizza Margarita.png" alt="Imagen 3">
+                    <img src="img/Pizza Pepperoni.png" alt="Imagen 4">
+                    <img src="img/Pizza Vegetariana.png" alt="Imagen 5">
+                    <!-- Agrega más imágenes aquí -->
+                </div>
+                <div class="gallery-button">
+                    <button onclick="prevImage()">Anterior</button>
+                    <button onclick="nextImage()">Siguiente</button>
+                </div>
+                <br>
+                <script>
+                    // JavaScript para la funcionalidad de los botones
+                    const images = document.querySelectorAll('.gallery img');
+                    let currentImage = 0;
+            
+                    function showImage(index) {
+                        images.forEach((image, i) => {
+                            if (i === index) {
+                                image.style.display = 'block';
+                            } else {
+                                image.style.display = 'none';
+                            }
+                        });
+                    }
+            
+                    function prevImage() {
+                        currentImage = (currentImage - 1 + images.length) % images.length;
+                        showImage(currentImage);
+                    }
+            
+                    function nextImage() {
+                        currentImage = (currentImage + 1) % images.length;
+                        showImage(currentImage);
+                    }
+            
+                    // Mostrar la primera imagen al cargar la página
+                    showImage(currentImage);
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
